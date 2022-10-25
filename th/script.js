@@ -47,13 +47,14 @@ function setName(event){
 function setQuestion(event){
   let askedQuestion = document.getElementById("name");
   let question = document.getElementById("question").value;
+  var userName = document.getElementById("username").value;
 
   if (event.key === "Enter"){
     if (question === ""){
       alert("กรุณาถามคำถาม");
     } else {
   
-      askedQuestion.innerHTML = `คำถามของคุณ: ${question}`;
+      askedQuestion.innerHTML = `คำถามของ${userName}: ${question}`;
       askedQuestion.style.fontSize = "40px";
       askedQuestion.style.transitionDuration = "400ms";
       questionInput.style.display = "none";
