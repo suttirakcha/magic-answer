@@ -48,14 +48,14 @@ function setName(event){
 function setQuestion(event){
   let askedQuestion = document.getElementById("name");
   let question = document.getElementById("question").value;
-  let luckyResult = document.getElementById("luckyResult");
+  let userName = document.getElementById("username").value;
 
   if (event.key === "Enter"){
     if (question === ""){
       alert("Please ask the question.");
     } else {
   
-      askedQuestion.innerHTML = `Your question: ${question}`;
+      askedQuestion.innerHTML = `${userName}'s question: ${question}`;
       askedQuestion.style.fontSize = "40px";
       askedQuestion.style.transitionDuration = "400ms";
       questionInput.style.display = "none";
